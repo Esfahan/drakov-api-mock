@@ -1,0 +1,12 @@
+version: '3'
+services:
+  api-mock:
+    build: .
+    container_name: api-mock
+    hostname: api-mock
+    working_dir: /code
+    ports:
+      - "3000:3000"
+    volumes:
+      - "./code:/code"
+    tty: true
